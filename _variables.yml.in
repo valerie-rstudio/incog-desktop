@@ -1,2 +1,0 @@
-version: ${CPACK_PACKAGE_VERSION}
-buildType: ${RSTUDIO_BUILD_TYPE}

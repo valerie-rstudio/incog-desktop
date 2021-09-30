@@ -1,9 +1,0 @@
----
-title: "Prerequisites"
-aliases:
-  - /getting-started.html#prerequisites
----
-
-## Prerequisites
-RStudio Desktop requires a previous installation of R version 3.0.1 or higher. If you don't already have R, download it from [https://cran.rstudio.com/](https://cran.rstudio.com/). A 64-bit version of R is required on macOS and Linux; RStudio Desktop Pro for Microsoft Windows supports both 32-bit and 64-bit R sessions.
-
