@@ -1,0 +1,47 @@
+---
+title: "Installation"
+aliases:
+  - /getting-started.html#installation
+---
+
+## Installation
+
+### Microsoft Windows
+RStudio Pro for Windows requires a 64-bit edition of Microsoft Windows 10 or newer.
+
+#### Installer
+Download the self-extracting installer (.exe) and execute it. Follow the prompts in the setup wizard. Administrator access is required to complete the installation. The installer will create a shortcut for RStudio and an Add/Remove Programs entry for uninstall.
+
+![RStudio Windows Setup Welcome Page](../images/setup-wizard.png)
+
+#### Zipfile Option
+A zip file may be downloaded instead of the self-extracting installer. Download and extract the .zip to any location. RStudio may then be run directly from that location via `rstudio.exe` (in the `bin` folder).
+
+### Mac
+RStudio for Mac requires macOS 10.13 (High Sierra) or newer. Download the disk image (.dmg) and open it. Drag the RStudio icon to Applications then eject the disk image once complete. To uninstall, move RStudio from where it was installed to the trash.
+
+![RStudio Pro Mac Disk Image Contents](../images/mac-image.png)
+
+### Linux
+RStudio produces binary packages targeting the following 64-bit Linux desktop distros. Download the appropriate package and install using system tools.
+
++----------------------+---------------------------+
+| Linux Distro         | RStudio package format    |
++:=====================+:==========================+
+| Ubuntu 18.04 LTS     | deb                       |
+| Ubuntu 20.04 LTS     |                           |
++----------------------+---------------------------+
+| Debian 9             | deb                       |
+| Debian 10            |                           |
++----------------------+---------------------------+
+| RHEL/CentOS 7        | rpm                       |
++----------------------+---------------------------+
+| RHEL/CentOS 8        | rpm                       |
++----------------------+---------------------------+
+| SLES 12              | rpm                       |
++----------------------+---------------------------+
+| OpenSUSE/SLES 15     | rpm                       |
++----------------------+---------------------------+
+
+Linux desktop users may need to import [RStudio's public code-signing key](https://www.rstudio.com/code-signing/) prior to installation, depending on the operating system's security policy.
+

@@ -1,0 +1,20 @@
+---
+title: "Command Line Operations"
+aliases:
+  - /license-management.html#command-line-operations
+---
+
+## Command Line Operations
+
+All licensing operations available in the RStudio user interface may also be performed from the command-line using the *license-manager* executable. This is rarely necessary, except in some cases outlined earlier in this document, or if instructed by a customer support representative.
+
++---------+----------------------------------------------------------+
+| OS      | Default Location                                         | 
++:========+:=========================================================+
+| Windows | C:\\Program Files\\RStudio\\bin\\license-manager.exe     |
++---------+----------------------------------------------------------+
+| macOS   | /Applications/RStudio.app/Contents/MacOS/license-manager |
++---------+----------------------------------------------------------+
+| Linux   | /usr/lib/rstudio/bin/license-manager                     |
++---------+----------------------------------------------------------+
+

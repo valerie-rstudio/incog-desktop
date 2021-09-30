@@ -1,0 +1,41 @@
+---
+title: "Product Activation"
+aliases:
+  - /license-management.html#product-activation
+---
+
+## Product Activation
+An RStudio Desktop Pro license is delivered as a License File (.lic).
+
+### Activation Basics
+As the evaluation period or a previously installed license nears expiration, a warning bar will appear at the bottom of RStudio.
+
+![License Expiring Soon Warning Bar](../images/license-will-expire-bar.png)
+
+When a license expires, the warning bar will indicate that the license has expired. If the license expires entirely while RStudio is being used, an error is displayed, after which RStudio will close.
+
+![License Expired Dialog](../images/no-license.png)
+
+**Do not let users continue using the product right up to the end of this grace period, as it could result in lost work.**
+
+Purchase a license to continue using the product. The license is delivered as a license file (.lic) or a license key. We recommend activating RStudio Desktop Pro using the license file to take full advantage of your [purchased RStudio Desktop license terms](https://www.rstudio.com/about/software-license-descriptions/).
+
+It is not necessary to wait until the evaluation period has expired to install a license.
+
+![Manage License Dialog With License File and License Key Options](../images/expired-license.png)
+
+### License File Activation
+
+Once you receive a license file (.lic) from RStudio, click *Select license file...* in the **Manage RStudio License** dialog, and browse to the file.
+
+Once the file is imported and validated, RStudio Desktop Pro will be ready for use. The **Manage RStudio License** dialog will now show details on the installed license, and buttons for updating or removing the license.
+
+*Select new license file...* will replace the existing license with that from a new license file.
+
+*Remove license...* will delete the current license, and a new license will need to be installed to continue using the product (if the evaluation period has also expired).
+
+![Manage License Dialog Showing License File Details](../images/valid-license-file.png)
+
+::: {.callout-note}
+Activating with a license file is preferred. However, you can instead activate with a license key.  To do so, click *Activate with license key…* in the **Manage RStudio License** dialog. Paste the key into the field and press *Activate*.
+:::

@@ -1,0 +1,30 @@
+---
+title: "Evaluations"
+aliases:
+  - /license-management.html#evaluations
+---
+
+## Evaluations
+
+### Beginning Evaluations
+
+In most configurations an evaluation starts automatically when RStudio is run for the first time by a given user account on a given computer.
+
++---------------------+------------+-------------------------------------------+
+| Computer Type       | Internet?  | Evaluation                                |
++:====================+:===========+:==========================================+
+| Physical            | Yes        | Automatic                                 |
++---------------------+------------+-------------------------------------------+
+| Physical            | No         | Automatic                                 |
++---------------------+------------+-------------------------------------------+
+| Virtual             | Yes        | Automatic                                 |
++---------------------+------------+-------------------------------------------+
+| Virtual             | No         | Manual (requires license file-based trial)|
++---------------------+------------+-------------------------------------------+
+
+For the final case, a virtual machine without internet access, contact RStudio to obtain a license file to enable a trial period.
+
+### Extending Evaluations
+
+If you are unable to evaluate RStudio Desktop Pro during the initial evaluation period, you can request an extension from RStudio support (<support@rstudio.com>), and it will be provided via a short term license file which is installed in the same fashion as a regular license file.
+

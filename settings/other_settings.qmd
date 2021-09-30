@@ -1,0 +1,26 @@
+---
+title: "Other Settings"
+aliases:
+  - /settings.html#other-settings
+---
+
+## Other Settings
+
+The `~/.config/rstudio`/`/etc/rstudio/` folders (or Windows equivalent as described above) contains several  subfolders which can be used to install per-user content and/or system-wide defaults.
+
++----------------+------------------------------------------------------------+
+| Folder         | Contents                                                   |
++:===============+:===========================================================+
+| `themes`       |  `.rstheme` files defining additional editor color schemes |
++----------------+------------------------------------------------------------+
+| `keybindings`  |  `.json` files defining custom keybindings                 |
++----------------+------------------------------------------------------------+
+| `snippets`     |  `.snippets` files defining editor snippets                |
++----------------+------------------------------------------------------------+
+| `templates`    | Default template content for new files created in RStudio  |
++----------------+------------------------------------------------------------+
+| `dictionaries` | Additional dictionaries and languages for spell-checking   |
++----------------+------------------------------------------------------------+
+
+More information on each of these folders and their contents can be found in the RStudio Workbench Administration Guide.
+

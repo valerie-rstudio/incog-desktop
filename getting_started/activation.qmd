@@ -1,0 +1,26 @@
+---
+title: "Activation"
+aliases:
+  - /getting-started.html#activation
+---
+
+## Activation {.pro-header} 
+
+When a user first starts RStudio it will activate an initial evaluation period during which the product is fully usable. After the evaluation period expires, the product will need to be activated with a license to continue using it.
+
+### Viewing License Status
+
+Use **Help/Manage License** menu to display the *Manage RStudio License* dialog and view the amount of time remaining in the evaluation.
+
+![Manage License Dialog Showing Evaluation Period](../images/manage-first-run-eval.png)
+
+The license status can also be viewed from the *About* dialog.
+
+![RStudio Pro About Dialog](../images/about-first-run.eval.png)
+
+### License Activation
+
+After purchasing a license you will receive a license file (.lic). Use the *Manage License* dialog and use "Select license file..." and follow the instructions.
+
+Additional details on license management can be found in the [License Management](../license_management/license_management.qmd) section.
+

@@ -1,0 +1,13 @@
+---
+title: "Overview"
+aliases:
+  - /remote-desktop.html
+---
+
+# Remote Desktop {.pro-header}
+
+When using RStudio Desktop Pro, you can launch and connect to sessions via a remote RStudio Workbench instance, allowing you to do your work on a more powerful computing system while providing the enhanced desktop look-and-feel. 
+
+::: {.callout-note}
+RStudio Desktop Pro clients will be unable to connect to RStudio Workbench when it is configured to use Google Authentication due to restrictions from Google - see [Google's Notice](https://developers.googleblog.com/2020/08/guidance-for-our-effort-to-block-less-secure-browser-and-apps.html) for more information.
+:::

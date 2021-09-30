@@ -1,0 +1,91 @@
+---
+title: "Session Servers"
+aliases:
+  - /remote-desktop.html#session-servers
+---
+
+## Session Servers
+
+### UI Configuration
+
+#### Adding Session Servers
+
+Session servers can be defined by going to the session server settings dialog, which you can find underneath the connection status dropdown in the upper right corner of the IDE.
+
+![Connection Status Dropdown](../images/connection-status-dropdown.png)
+
+Click on `Session Server Settings` and you'll be presented with a dialog where you can add and remove session servers.
+
+![Session Server Settings Dialog](../images/session-server-settings.png)
+
+Upon clicking on the `Add` button, you will be shown the following dialog to add a session server. Simply give the server the desired name and add the base URL of your RStudio Workbench instance. 
+
+![Add Session Server Dialog](../images/add-session-server.png)
+
+Path mappings allow you to map local system paths to remote server paths that will automatically be replaced when running Launcher Jobs on that particular session server. For example, if you map a shared drive on your local Windows machine at `H:` and this maps to `/shared/code` on your remote session server, you can add a path mapping from `H:->/shared/code` to ensure Launcher job paths including local paths are properly rewritten to remote paths.
+
+#### Options
+
+On the Session Server Settings dialog, there are two options: `Start new sessions` and `Close remote sessions on exit`.
+
+`Start new sessions` allows you to control where sessions are started when opening the IDE. If set to `Ask` you will be prompted to select where to start your session every time you open the IDE. If set to `Locally`, your session will be started locally, and you will have to use the Connection Status dropdown to connect to remote sessions. If set to `On the server`, your session will start on the default session server defined (if any).
+
+`Close remote sessions on exit` will control whether or not sessions are automatically quit when your desktop browser is closed. It can be set to `Always`, `Never`, or `Ask`. If set to `Ask` you will be prompted every time whether or not to close the session when exiting the desktop browser.
+
+### Configuration file
+
+In addition to end-users configuring session servers via the UI, you may pre-configuration session server settings via a config file named `session-servers.conf` stored in a system location. This causes the session server settings to be read-only by users, and they cannot modify the settings in any way.
+
+On Windows, the file is `%programdata%\RStudio\session-servers.conf`. On macOS and Linux it is `/etc/rstudio/session-servers.conf`.
+
+This file is not created by RStudio, so you must create it and distribute it as appropriate in order for it to show up in users' desktop settings. The file is a simple JSON file with the following elements:
+
+Parameter | Description
+------------------------ | -------------------------------------------------------------------------------------------------- |
+servers (array of session server object) | An array of session servers
+defaultSessionLocation (string) | Where to launch a session when the IDE is first opened. Corresponds to the UI setting `Start new sessions`. Can be one of "Ask", "Locally", or "Server".
+closeServerSessionsOnExit (string) | Control whether or not to close remote server sessions when the desktop is closed. Corresponds to the UI setting `Close remote sessions on exit`. Can be one of "Ask", "Always", or "Never".
+
+Session server objects have the following parameters:
+
+Parameter | Description
+------------------------ | -------------------------------------------------------------------------------------------------- |
+name (string) | The name of the server
+url (string) | The base URL of the server
+isDefault (boolean) | Whether or not the session is the default for launching. There must only be one default in the servers array.
+allowPathMapping (boolean) | Whether or not path mapping is allowed for this server. If defining path mappings, this should be `true`.
+pathMappings (array of path mapping object) | An array of path mappings
+
+Path mapping objects have the following parameters:
+
+Parameter | Description
+------------------------ | -------------------------------------------------------------------------------------------------- |
+localPath (string) | The local path
+remotePath (string) | The remote path
+
+The following is an example `session-servers.conf`:
+
+```json
+{
+   "servers":[
+    {
+       "name":"RSW",
+       "url":"http://rstudio.mycorp.com:8887",
+       "isDefault":false,
+       "allowPathMapping":false,
+       "pathMappings":[]
+    },
+    {
+       "name":"Staging RSW",
+       "url":"http://staging-rstudio.mycorp.com:8887",
+       "isDefault":true,
+       "allowPathMapping":true,
+       "pathMappings":[{"localPath":"H:\\", "remotePath":"/shared/code"}]
+    }],
+    "defaultSessionLocation":"Ask",
+    "closeServerSessionsOnExit":"Never"
+}
+```
+
+
+
